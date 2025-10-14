@@ -5,4 +5,4 @@ The project was to develop an online drug store to sell cheaper Canadian prescri
 
 As shown in [**Figure X3-12**](https://learning.oreilly.com/library/view/agile-practice-guide/9781628253993/appendix_x3.xhtml#figx3-12), high levels of buy-in and trust are evident for those who worked in an empowered way. The visual nature of the website made it easy to show new increments of functionality, but the system criticality was fairly high with essential funds for the pharmacy at stake. As mentioned, there were very high rates of change, but the small experienced team handled them well and had easy access to a knowledgeable business representative. The approach was very successful and extremely agile.
 
-[!CODRx/image (1).png](image(1).png)
+Trying to make the image link work.
