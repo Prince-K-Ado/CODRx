@@ -1,0 +1,28 @@
+django
+djangorestframework
+dj-database-url
+psycopg2
+psycopg2-binary 
+django-environ
+django-anymail
+# Security/auth
+bcrypt
+djangorestframework-simplejwt  # JWT authentication
+python-dotenv
+stripe
+boto3
+cryptography
+validators
+# HTTP requests
+requests
+sendgrid
+pandas
+numpy
+scikit-learn
+pytest
+pytest-django
+pytest-cov
+black
+flake8
+django-cors-headers
+mypy
