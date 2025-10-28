@@ -210,7 +210,7 @@ codrx-frontend/
   - Update docs/README.md or add a dated note like `docs/iteration-2025-10-27.md`
   - Include purpose, changes, testing steps, and any migration notes
 
-- Run local checks before pushing:
+- Run local checks before pushing: (**Make sure you are on the codrx-frontend folder**)
 
     ```bash
     npm install
