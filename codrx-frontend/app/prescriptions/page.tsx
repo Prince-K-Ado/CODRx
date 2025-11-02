@@ -1,4 +1,6 @@
 // app/prescriptions/page.tsx
+import ProtectedRoute from '../../components/ProtectedRoute'
+
 type RxStatus = 'NEW' | 'FILLED' | 'SHIPPED'
 
 type Prescription = {
@@ -34,6 +36,7 @@ export default function PrescriptionsPage() {
   // KVM hook idea: fire “view_prescriptions” here with your analytics later.
 
   return (
+    <ProtectedRoute>
     <section className="space-y-4">
       <header className="flex items-end justify-between gap-3">
         <div>
@@ -90,5 +93,6 @@ export default function PrescriptionsPage() {
         Demo data only. We&apos;ll fetch later other data from the Django API via a small client in <code>lib/api.ts</code>.
       </p>
     </section>
+    </ProtectedRoute>
   )
 }

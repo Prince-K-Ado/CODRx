@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { isLoggedIn, logoutUser } from '../lib/auth'
 
 type NavItem = {
   href: string
@@ -39,6 +40,7 @@ function NavLink({ href, label }: NavItem) {
 }
 
 export default function NavBar() {
+  const router = useRouter()
   const [open, setOpen] = useState(false)
 
   return (
@@ -68,6 +70,18 @@ export default function NavBar() {
             <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
           </svg>
         </button>
+        {isLoggedIn() && (
+          <button
+            className="ml-4 inline-flex items-center justify-center rounded-lg px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white text-sm font-medium transition"
+            onClick={() => {
+              logoutUser()
+              router.push('/login')
+              window.location.href = '/login'
+            }}
+          >
+            Logout
+          </button>
+        )}
       </div>
 
       {/* Mobile drawer */}
@@ -77,6 +91,17 @@ export default function NavBar() {
             {NAV.map((n) => (
               <NavLink key={n.href} {...n} />
             ))}
+            {isLoggedIn() && (
+          <button
+            onClick={() => {
+              logoutUser()
+              router.push('/login')
+            }}
+            className="text-left text-red-600 dark:text-red-400 px-3 py-2 text-sm"
+          >
+            Logout
+          </button>
+            )}
           </div>
         </div>
       )}
