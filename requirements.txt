@@ -13,6 +13,9 @@ stripe
 boto3
 cryptography
 validators
+drf-spectacular
+whitenoise
+django-storages[boto3]
 # HTTP requests
 requests
 sendgrid
